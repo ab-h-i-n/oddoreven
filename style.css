@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poor Story', system-ui;
+    user-select: none;
+    -webkit-user-select: none;
+}
+:root{
+    --bg-color: #323437;
+    --sub-color: #646669;
+    --main-color: #8514e2;
+    --text-color: #d1d0c5;
+    --sub-alt-color: #2c2e31;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+    overflow: hidden;
+}
+header{
+    background-color: #8514e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    position: relative;
+}
+.logo{
+    font-weight: 900;
+    font-size: 3rem;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    text-shadow: 2px 2px 1px white;
+}
+.tries-container{
+    border: 2px dashed black;
+    position: absolute;
+    right: 2.5rem;
+    top:50%;
+    transform: translateY(-50%);
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px white;
+    padding: .5rem 1rem;
+    box-shadow: 2px 2px 20px inset white;
+}
+main{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+section header{
+    display: grid;
+    place-content: center;
+    font-size: 2rem;
+    font-weight: 800;
+    text-shadow: 1px 1px 1px white;
+    text-decoration: underline;
+    background-color: transparent;
+    
+}
+.score-container{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.score-container .score{
+    color: white;
+    font-weight: 900;
+}
+.number-container{
+    padding: 3rem 0px;
+    display: flex;
+    justify-content: center;
+}
+.number{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 5rem;
+    display: grid;
+    place-content: center;
+}
+button{
+    position: fixed;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50% , 50%);
+    font-size: 1.5rem;
+    font-weight: 900;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    border: none;
+    box-shadow: 2px 3px 5px black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: transparent;
+}
+button div{
+    cursor: pointer;
+    background-color: grey;
+    height: 150px;
+    border-radius: 150px 0px 0px 150px;
+    display: grid;
+    place-content: center;
+}
+button div.even{
+    border-radius: 0px 150px 150px 0px;
+    border-left: 1px solid black;
+}
+button div.active{
+    scale: 0.99;
+    background-color: rgb(146, 221, 33);
+}
+button div.odd.active{
+    scale: 0.99;
+    background-color: rgb(221, 33, 33);
+}
+
+
+.play{
+    position: fixed;
+    bottom: 15%;
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 2px 3px 5px black;
+    cursor: pointer;
+}
+.play img{
+    width: 50px;
+    height: 50px;
+}
+.play:active{
+    box-shadow: 1px 1px 1px black;
+    scale: 0.99;
+}
+.user .number{
+    box-shadow:2px 3px 10px black;
+    cursor: pointer;
+}
+.user .number:active{
+    box-shadow: 1px 1px 1px black;
+    scale: 0.99;
+}
+section.pc {
+    background-color: rgb(240, 95, 95);
+}
+section.user{
+    background-color: rgba(76, 216, 99, 0.445);
+}
+
+@media screen and (max-width : 800px) {
+    
+    header{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .logo{
+        font-size: 2rem;
+    }
+    .tries-container{
+        font-size: 1rem;
+        right: 1rem;
+    }
+    .number{
+        width: 130px;
+        height: 130px;
+    }
+    button{
+        bottom: 45%;
+    }
+}
